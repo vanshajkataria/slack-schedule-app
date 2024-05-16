@@ -1,0 +1,110 @@
+({
+	"type": "modal",
+	"callback_id": "message_modal",
+	"title": {
+		"type": "plain_text",
+		"text": "Schedule Message",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Schedule",
+		"emoji": true
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "plain_text",
+					"text": "Step 1 of 2",
+					"emoji": true
+				}
+			]
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "You can personalize your message using the following substitution:\n*{fullName}, {firstName}, {lastName}*"
+				}
+			]
+		},
+		{
+			"type": "input",
+			"block_id": "message_block",
+			"element": {
+				"type": "plain_text_input",
+				"multiline": true,
+				"action_id": "message_input"
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "📝 Write your message",
+				"emoji": true
+			}
+		},
+		{
+			"block_id": "select_channel_block_id",
+			"type": "input",
+			"label": {
+				"type": "plain_text",
+				"text": "👥 Recepients"
+			},
+			"element": {
+				"type": "conversations_select",
+				"action_id": "conversation_dropdown",
+				"response_url_enabled": true
+			}
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "plain_text",
+					"text": "Step 2 of 2",
+					"emoji": true
+				}
+			]
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Configurations*"
+			}
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "plain_text",
+					"text": "Set the date and time in past if you want to send message immediately.",
+					"emoji": true
+				}
+			]
+		},
+		{
+			"type": "input",
+			"block_id": "date_time_block",
+			"element": {
+				"type": "datetimepicker",
+				"action_id": "datetimepicker"
+			},
+			"label": {
+				"type": "plain_text",
+				"text": "Select Date and Time",
+				"emoji": true
+			}
+		}
+	]
+})

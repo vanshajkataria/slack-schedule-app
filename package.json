@@ -1,0 +1,21 @@
+{
+  "name": "slackapp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.18.0",
+    "slack-block-builder": "^2.8.0"
+  }
+}
