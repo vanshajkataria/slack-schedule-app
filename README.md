@@ -1,1 +1,1 @@
-# slack-schedule-app
+# slack-schedule-app (send bulk messages)
